@@ -45,11 +45,18 @@ const Navbar = () => {
             </ul>
 
             {/* Mobile Navigation Icon */}
-            <div onClick={handleNav} className="block sm:hidden pr-5">
+            <div
+                onClick={handleNav}
+                className=" sm:hidden pr-5 flex justify-center"
+            >
                 {nav ? (
-                    <AiOutlineClose size={30} />
+                    <div className="flex items-center">
+                        <AiOutlineClose size={30} />
+                    </div>
                 ) : (
-                    <AiOutlineMenu size={30} />
+                    <div className="flex items-center">
+                        <AiOutlineMenu size={30} />
+                    </div>
                 )}
             </div>
 

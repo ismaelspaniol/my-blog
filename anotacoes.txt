@@ -1,0 +1,9 @@
+Exemplo de Marcações:
+// WARN teste
+// TODO teste
+// FIXME teste
+// TEST teste
+// ROUTE teste
+
+Lista de Tarefas:
+// TODO: Selecionar contratante na barra do topo da tela (apenas superadmins) ! Atualizar token
