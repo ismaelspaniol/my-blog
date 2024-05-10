@@ -26,7 +26,9 @@ export default function RootLayout({
                     <nav>
                         <Navbar></Navbar>
                     </nav>
-                    <div className="flex-grow p-10">{children}</div>
+                    <div className="flex-grow mx-auto max-w-screen-md">
+                        {children}
+                    </div>
 
                     <footer className="bg-gray-800 text-white text-center py-4">
                         <p>
