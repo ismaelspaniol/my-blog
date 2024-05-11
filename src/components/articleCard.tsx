@@ -1,29 +1,28 @@
 import Link from "next/link";
 
-export const ArticleCard = ({
-    id,
-    date,
-    title,
-    url,
-    content,
-}: {
+export interface ArticleCard {
     id: number;
-    date: string;
     title: string;
+    date: Date;
     url: string;
-    content: string[];
-}) => {
+    content: Paragraph;
+}
+
+interface Paragraph {
+    paragraph: string[];
+}
+
+export const ArticleCard = ({ articleCard }: { articleCard: ArticleCard }) => {
     return (
         <div className=" p-5 rounded ">
-            <Link href={url}>
-                <p className=" text-4xl font-semibold">{title}</p>
+            <Link href={articleCard.url}>
+                <p className=" text-4xl font-semibold">{articleCard.title}</p>
             </Link>
-            <p className="italic">{date}</p>
-            <div id="content">
-                {" "}
-                {content.map((paragrafo, index) => (
+            <p className="italic">{articleCard.date.toISOString()}</p>
+            <div>
+                {articleCard.content.paragraph.map((paragraph, index) => (
                     <p className="text-left pb-4" key={index}>
-                        {paragrafo}
+                        {paragraph}
                     </p>
                 ))}
             </div>
