@@ -20,8 +20,8 @@ export default function RootLayout({
         <html lang="pt-br">
             <body className={inter.className}>
                 <div className="flex flex-col h-screen">
-                    <article className="p-2 pb-5 text-center text-5xl">
-                        <h1>Seja bem vindo sa asdsdad</h1>
+                    <article className="p-2 pb-5 text-center text-3xl">
+                        <h1>Ismael Spaniol Dev</h1>
                     </article>
                     <nav>
                         <Navbar></Navbar>
@@ -31,9 +31,7 @@ export default function RootLayout({
                     </div>
 
                     <footer className="bg-gray-800 text-white text-center py-4">
-                        <p>
-                            &copy; 2024 Seu Site. Todos os direitos reservados.
-                        </p>
+                        <p>&copy; 2024. Todos os direitos reservados.</p>
                     </footer>
                 </div>
             </body>

@@ -16,7 +16,7 @@ export const ArticleCard = ({ articleCard }: { articleCard: IArticleCard }) => {
     return (
         <div className=" p-5 rounded ">
             <Link href={articleCard.url}>
-                <p className=" text-4xl font-semibold">{articleCard.title}</p>
+                <p className=" text-3xl font-semibold">{articleCard.title}</p>
             </Link>
             <p className="italic">{articleCard.date.toISOString()}</p>
             <div>
