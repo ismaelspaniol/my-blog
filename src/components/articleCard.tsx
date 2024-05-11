@@ -1,18 +1,18 @@
 import Link from "next/link";
 
-export interface ArticleCard {
+export interface IArticleCard {
     id: number;
     title: string;
     date: Date;
     url: string;
-    content: Paragraph;
+    content: IParagraph;
 }
 
-interface Paragraph {
+export interface IParagraph {
     paragraph: string[];
 }
 
-export const ArticleCard = ({ articleCard }: { articleCard: ArticleCard }) => {
+export const ArticleCard = ({ articleCard }: { articleCard: IArticleCard }) => {
     return (
         <div className=" p-5 rounded ">
             <Link href={articleCard.url}>
