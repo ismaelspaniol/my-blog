@@ -12,7 +12,18 @@ model article_card {
   id        Int      @id @default(autoincrement())
   date      DateTime
   title     String   
-  url     String @unique
+  url       String @unique
   content   Json
+  createdAt DateTime @default(now())
+}
+
+
+
+model article_comment {
+  id        Int      @id @default(autoincrement()) 
+  url       String
+  name      String   
+  email     String?   
+  comment   String
   createdAt DateTime @default(now())
 }
